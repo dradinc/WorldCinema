@@ -10,7 +10,7 @@
 
 
     <!-- Цвета проекта -->
-    <color name="backgtound_collor">#332973</color>
+    <color name="backgtound_color">#332973</color>
     <color name="orange">#EF3A01</color>
     <color name="gray">#AFAFAF</color>
 </resources>

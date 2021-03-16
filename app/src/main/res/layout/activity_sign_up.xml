@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgtound_color"
+    tools:context=".SignUp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Верхни блок: блок содержащий логотип и название -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="25dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <!-- Логотип приложения -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="95dp"
+                    android:src="@drawable/logo"/>
+
+                <!-- Название приложения -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="WorldCinema"
+                    android:textSize="35sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/orange"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-light"/>
+
+            </LinearLayout>
+
+            <!-- Верхни блок: блок содержащий поля авторизации -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <!-- Поле для ввода имени -->
+                <EditText
+                    android:id="@+id/NameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/rounder_only_border"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="text"
+                    android:hint="Имя"
+                    android:textColorHint="@color/gray"/>
+
+                <!-- Поле для ввода фамилии -->
+                <EditText
+                    android:id="@+id/LastNameInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/rounder_only_border"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="text"
+                    android:hint="Фамилия"
+                    android:textColorHint="@color/gray"/>
+
+                <!-- Поле для ввода почты -->
+                <EditText
+                    android:id="@+id/EmailInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/rounder_only_border"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="textEmailAddress"
+                    android:hint="E-mail"
+                    android:textColorHint="@color/gray"/>
+
+                <!-- Поле для ввода пароля -->
+                <EditText
+                    android:id="@+id/PasswordInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/rounder_only_border"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="textPassword"
+                    android:hint="Пароль"
+                    android:textColorHint="@color/gray"/>
+
+                <!-- Поле для ввода пароля -->
+                <EditText
+                    android:id="@+id/RepeatPasswordInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/rounder_only_border"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="textPassword"
+                    android:hint="Пароль"
+                    android:textColorHint="@color/gray"/>
+
+            </LinearLayout>
+
+            <!-- Верхни блок: блок содержащий кнопки -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="25dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:paddingBottom="25dp">
+
+                <!-- Кнопка авторизации -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/rounder_background">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Зарегистрироваться"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+
+                <!-- Кнопка регистрации -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/rounder_only_border">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="У меня уже есть аккаунт"
+                        android:gravity="center"
+                        android:textColor="@color/orange"
+                        android:textStyle="bold"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
