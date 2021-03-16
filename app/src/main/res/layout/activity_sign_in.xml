@@ -18,7 +18,8 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight="1"
-            android:gravity="center">
+            android:gravity="bottom"
+            android:paddingBottom="25dp">
 
             <!-- Логотип приложения -->
             <ImageView
@@ -98,6 +99,7 @@
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/rounder_background">
                 <TextView
+                    android:onClick="auth_onClick"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Войти"
@@ -118,6 +120,7 @@
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/rounder_only_border">
                 <TextView
+                    android:onClick="reg_onClick"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Регистрация"
