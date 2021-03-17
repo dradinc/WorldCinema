@@ -1,22 +1,28 @@
 package com.example.worldcinema
 
+import android.app.DownloadManager
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
-import khttp.responses.Response
+import androidx.core.net.toUri
 import org.json.JSONObject
+import java.io.IOException
 import java.lang.StringBuilder
 import java.net.URL
 
 class SignUp : AppCompatActivity() {
+    // Переменные для работы с элеменатми
     private var nameText : EditText? = null
     private var lastnameText : EditText? = null
     private var emailText : EditText? = null
     private var passwordText : EditText? = null
     private var repeatpasswordText : EditText? = null
+
+    // Переменная для работы с API
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,19 +41,8 @@ class SignUp : AppCompatActivity() {
 
     public fun reg_onClick(view : View) {
         if ((nameText?.text?.length  != 0) and (lastnameText?.text?.length != 0) and (emailText?.text?.length != 0) and (passwordText?.text?.length != 0) and (repeatpasswordText?.text?.length != 0)) {
-            if ((emailText?.text.toString().isEmailValid()) and (passwordText?.text == repeatpasswordText?.text)) {
-                // Создаём запрос
-                val response : Response = khttp.post(
-                    url= StringBuilder(R.string.Servers).append("/auth/register").toString(),
-                    json = mapOf(
-                        "email" to emailText?.text.toString(),
-                        "password" to passwordText?.text.toString(),
-                        "firstName" to nameText?.text.toString(),
-                        "lastName" to lastnameText?.text.toString())
-                )
+            if ((emailText?.text.toString().isEmailValid()) and (passwordText?.text.toString() == repeatpasswordText?.text.toString())) {
 
-                val otvet : JSONObject = response.jsonObject
-                Toast.makeText(this, response.text, Toast.LENGTH_SHORT).show()
             }
             else {
                 // Проверка E-mail на корректность ввода
@@ -77,7 +72,7 @@ class SignUp : AppCompatActivity() {
         }
     }
 
-    fun String.isEmailValid() : Boolean {
+    private fun String.isEmailValid() : Boolean {
         return android.util.Patterns.EMAIL_ADDRESS.matcher(this).matches()
     }
 }

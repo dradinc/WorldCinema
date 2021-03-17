@@ -60,15 +60,15 @@
                     android:id="@+id/NameInput"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
-                    android:background="@drawable/rounder_only_border"
                     android:layout_marginLeft="25dp"
-                    android:layout_marginRight="25dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="25dp"
                     android:layout_marginBottom="10dp"
+                    android:background="@drawable/rounder_only_border"
+                    android:hint="Имя"
                     android:inputType="text"
                     android:textColor="@color/white"
-                    android:hint="Имя"
-                    android:textColorHint="@color/gray"/>
+                    android:textColorHint="@color/gray" />
 
                 <!-- Поле для ввода фамилии -->
                 <EditText
