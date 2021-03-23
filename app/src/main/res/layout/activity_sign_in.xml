@@ -91,6 +91,12 @@
             android:gravity="bottom"
             android:paddingBottom="25dp">
 
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:indeterminate="true"
+                android:visibility="invisible"/>
             <!-- Кнопка авторизации -->
             <LinearLayout
                 android:layout_width="match_parent"
@@ -102,11 +108,13 @@
                 android:layout_marginBottom="10dp"
                 android:background="@drawable/rounder_background">
                 <TextView
+                    android:id="@+id/textVhod"
                     android:onClick="auth_onClick"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Войти"
                     android:gravity="center"
+                    android:visibility="visible"
                     android:textColor="@color/white"
                     android:textStyle="bold"
                     android:textSize="20sp"/>

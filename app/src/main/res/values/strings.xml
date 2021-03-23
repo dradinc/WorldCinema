@@ -1,6 +1,3 @@
 <resources>
     <string name="app_name">WorldCinema</string>
-    <string name="Servers">http://cinema.areas.su</string>
-    <string name="ServersVideo">http://cinema.areas.su/up/video/</string>
-    <string name="ServersImage">http://cinema.areas.su/up/images/</string>
 </resources>
